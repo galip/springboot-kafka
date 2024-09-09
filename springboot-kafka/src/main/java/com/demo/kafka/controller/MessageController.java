@@ -21,7 +21,7 @@ public class MessageController {
 	@GetMapping("/publish")
 	public ResponseEntity<String> publish(@RequestParam String message) {
 		kafkaProducer.sendMessage(message);
-		return ResponseEntity.ok("Successful.");
+		return ResponseEntity.ok("Successful!");
 	}
 	
 
